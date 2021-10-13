@@ -1,4 +1,4 @@
-name: Sync GitHub to S3, invalidate CloudFront cache
+name: Update-CRC-site workflow
 
 on:
   push:
