@@ -126,6 +126,8 @@ section:last-child {
 	width: 72.5%;
 }
 
+/* Many thanks to this site for the collapsible section, https://dev.to/jordanfinners/creating-a-collapsible-section-with-nothing-but-html-4ip9 */
+
 details {
   user-select: none;
 }
