@@ -43,7 +43,7 @@ p {
 }
 
 #name h2 {
-	font-size: 2em;
+	font-size: 1.5em;
 	margin-left: 2px;
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
 }
@@ -162,8 +162,8 @@ summary::-webkit-details-marker {
 
 .sectionContent h2 {
 	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: -2px;
+	font-size: 1.2em;
+	margin-bottom: -1.5px;
 }
 
 .subDetails {
