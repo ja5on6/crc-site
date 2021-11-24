@@ -23,14 +23,14 @@
 		
 		<div id="name">
 			<h1 class="quickFade delayTwo">Jason Y. Liu</h1>
-			<h2 class="quickFade delayThree"><a href="https://forrestbrazeal.com/2020/04/23/the-cloud-resume-challenge/">CRC</a> Challenger</h2>
+			<h2 class="quickFade delayThree"><a href="https://forrestbrazeal.com/2020/04/23/the-cloud-resume-challenge/" target="_blank">CRC</a> Challenger</h2>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-				<li><a href="https://www.linkedin.com/in/jliu5/">Message me via Linkedin</a></li>
-				<li><a href="https://calendly.com/geekout/happy-chat">Zoom with me</a></li>
-				<li><a href="https://wa.me/6593202358?text=Hello%21">Whatsapp me</a></li>
+				<li><a href="https://www.linkedin.com/in/jliu5/" target="_blank">Message me via Linkedin</a></li>
+				<li><a href="https://calendly.com/geekout/happy-chat" target="_blank">Zoom with me</a></li>
+				<li><a href="https://wa.me/6593202358?text=Hello%21" target="_blank">Whatsapp me</a></li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -70,28 +70,32 @@
 					<summary>1. HTML and CSS Front-end<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 10 hours</p>
 					<p>No beating around the bush but of cause I took a ready-made template, but in the midst of adding in the content here, I figured instead of making it a duplicate of my linkedin page, why not outline my journey towards full stack web development, as I develop this site? So over a couple of days in the evenings after work, I worked on getting the setup right. </p>
-					<p>This involved tweaking the html and css code base, within Route 53 setting up a domain and hosted zone, S3 static site hosting.</p>
-					<p>With a publicly accessible http site, now it's time to make it HTTPS. </p>
+					<p>This involved tweaking the html and css code base, setting up a domain and hosted zone within Route 53, and configuring S3 static site hosting.</p>
+					<p>With a publicly accessible http site, now it's time to make it a speedier HTTPS. </p>
 				</details>
 				
 				<details>
 					<summary>2. CloudFront<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 2 hours</p>
-					<p>Security is job zero, and one way to make my site more secure is by CloudFront, which also speeds up the delivery of the site to the end user as well. </p>
+					<p>Security is job zero, and one way to make my site more secure is by using CloudFront, which also speeds up the delivery of the site to the end users. Two birds with one stone! </p>
 					<p>The new CloudFront portal is surprisingly easy to use. I also activated AWS Certificate Manager as part of getting the TLS/SSL. </p>
-					<p>As I make changes to my site, some routine tasks such as logging in, file uploading etc became more of a chore, and I realised the need for automation. </p>
+					<p>As I make changes to my code, some routine tasks such as logging in, file uploading etc became more of a chore, and I realised the need for automation for the front-end through some CI/CD. </p>
 				</details>
 				
 				<details>
 					<summary>3. Front-end automation CI/CD<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 5 hours</p>
-					<p>With minimal working knowledge of Git and GitHub, this step was no easy feat. </p>
+					<p>With minimal working knowledge of Git and GitHub before I started this pet project, this step could have been unimaginable. XD </p>
+					<p>Through GitHub Actions, local changes are uploaded to S3, and the existing Cloudfront cache is invalidated. </p>
+					<p>You may check out the GitHub Actions YAML script <a href="https://github.com/ja5on6/crc-site/blob/master/.github/workflows/main.yml" target="_blank">here</a>.</p>
 				</details>
 				
 				<details>
 					<summary>4. Site visitor counter<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 20 hours</p>
-					<p>The only easy day was yesterday. </p>
+					<p>Now we come to building the backend of this site! </p>
+					<p>How this setup works is through a short <a href="https://github.com/ja5on6/crc-site/blob/master/scripts/main.js" target="_blank">javascript script</a> on this page, querying the REST API endpoint on API Gateway. This triggers a Lambda function that updates and returns the visitor number from a DynamoDB table. </p>
+					<p>The beauty of this is at the scale of this site, this setup is practically free! </p>
 				</details>
 				
 				<details>
@@ -159,7 +163,7 @@
 				<article>
 					<h2>Nanyang Technological University</h2>
 					<p class="subDetails">Bachelor of Accountancy (Honours with Distinction)</p>
-					<p>I have no formal education in IT! XD </p>
+					<p>Keep a look out for this space, as I hope to share an innovative project my team did whilst in school. To whet your appetite, it is our small contribution to building the Metaverse! </p>
 				</article>
 			</div>
 			<div class="clear"></div>
