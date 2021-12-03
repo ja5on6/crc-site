@@ -94,15 +94,15 @@
 					<summary>4. Visitor counter<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 20 hours</p>
 					<p>Now we come to building the backend of this site! </p>
-					<p>How this setup works is through a short <a href="https://github.com/ja5on6/crc-site/blob/master/scripts/main.js" target="_blank">javascript script</a> on this page, querying the REST API endpoint on API Gateway. This triggers a Lambda function that updates and returns the visitor number from a DynamoDB table. </p>
+					<p>How this setup works is through a short <a href="https://github.com/ja5on6/crc-site/blob/master/scripts/main.js" target="_blank">javascript script</a> on this page, querying the REST API endpoint on API Gateway. This triggers a Lambda function written in Python that updates and returns the visitor number from a DynamoDB table. </p>
 					<p>The beauty of this is at the scale of this site, the stack is practically free! </p>
 				</details>
 				
 				<details>
 					<summary>5. Back-end CI/CD with SAM<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 20 hours</p>
-					<p>In step 4, while I assembled the back-end successfully using mainly point-and-click on the AWS management console (and pasting in my Python code in Lambda of cause), it will definitely be cooler if I can do all these automatically without logging in to the AWS console! </p>
-					<p>Never did I know it takes several software applications to be able to use SAM - namely AWS CLI, AWS SAM CLI, Python and Docker, and it's a learning experience to pick up all of them. Thankfully with SAM, it automates the following deployment steps: build, zip code, upload to S3, create role, create/update function, create REST API, create resource, create method, update integration and create table. </p>
+					<p>In step 4, while I orchestrated the back-end successfully using mainly the AWS management console, it will definitely be cooler if I can do all these automatically without logging in to the console! </p>
+					<p>Never did I know it takes several software applications to be able to use SAM - namely AWS CLI, AWS SAM CLI and Docker (and Python), and it's a learning experience to pick up all of them. Thankfully with SAM, it automates the following deployment steps: build, zip code, upload to S3, create role, create/update function, create REST API, create resource, create method, update integration and create table. </p>
 					<p>After some debugging, I finally managed to set up the back-end in an efficient CI/CD manner! </p>
 				</details>
 				
@@ -120,7 +120,7 @@
 					<p class="subDetails">~ 2 hours</p>
 					<p>What a journey it is to take on this challenge, and I'm so glad I made something on my own and learnt a ton in the process!</p>
 					<p>There are a few relevant traits to complete this challenge successfully, [1] to be self-motivated; [2] to be good at problem-solving (to learn fast and google well!); [3] to be patient.</p>
-					<p>If I were to do this again, being more informed I will certainly plan better in terms of timelines and expectations. There were times where I got rather stressed and disheartened when I thought I can finish some tasks easily and quickly when in fact there are more complexity involved. This will be applicable especially when a project involves working with teammates, and good coordination and communication are needed.</p>
+					<p>If I were to do this again, being more informed I will certainly plan better in terms of timelines and expectations. There were times where I got rather stressed and disheartened when I thought I can finish some tasks easily and quickly when in fact there are more complexities involved. This will be applicable especially when a project involves working with teammates, and good coordination and communication are needed.</p>
 					<!--To learn fast and google well. -->
 					<!--Self-motivated -->
 					<!-- to be good at problem solving. -->
