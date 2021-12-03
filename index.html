@@ -44,7 +44,7 @@
 				</div>
 				
 				<div class="sectionContent">
-					<p>I recently came across The Cloud Resume Challenge by Forrest Brazeal and thought it's a pretty cool side project. To have the certifications and knowledge is admirable, but to also do the hands on, build and debug, is respectable. </p>
+					<p>I recently came across The Cloud Resume Challenge by Forrest Brazeal and thought it's a pretty cool side project. To have the certifications and knowledge is admirable, but to also do the hands-on, build and debug, is respectable. </p>
 					<p>To go through my own "baptism by fire", I got started and created this completely serverless site. </p>
 					<p>It has a static frontend, a dynamic backend for counting the number of visitors (bottom of this page), and a DevOps pipeline to automate deployment.</p>
 				</div>
@@ -63,21 +63,21 @@
 					<summary>0. Planning<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 5 hours</p>
 					<p>There is a saying in Chinese, 万事开头难, which roughly translates to everything is hard in the beginning, and it is the same for this project as well. With the minimalistic outline of the challenge, I was scratching my head on where to begin. </p>
-					<p>I took some time to understand the overall architecture needed, and trodded on looking for a good html css template. </p>
+					<p>I took some time to understand the overall architecture needed and trodded on looking for a good HTML CSS template. </p>
 				</details>
 
 				<details>
 					<summary>1. HTML and CSS Front-end<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 10 hours</p>
-					<p>No beating around the bush but of cause I took a ready-made template, but in the midst of adding in the content here, I figured instead of making it a duplicate of my linkedin page, why not outline my journey towards full stack web development, as I develop this site? So over a couple of days in the evenings after work, I worked on getting the setup right. </p>
-					<p>This involved tweaking the html and css code base, setting up a domain and hosted zone within Route 53, and configuring S3 static site hosting.</p>
-					<p>With a publicly accessible http site, now it's time to make it a speedier HTTPS. </p>
+					<p>No beating around the bush - of cause I took a ready-made template, but while adding in the content, I figured instead of making it a duplicate of my LinkedIn page, why not outline my journey towards full-stack web development, as I develop this site? So over a couple of days in the evenings after work, I worked on getting the setup right. </p>
+					<p>This involved tweaking the HTML and CSS codebase, setting up a domain and hosted zone within Route 53, and configuring S3 static site hosting.</p>
+					<p>With a publicly accessible HTTP site, now it's time to make it a speedier HTTPS. </p>
 				</details>
 				
 				<details>
 					<summary>2. CloudFront<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 2 hours</p>
-					<p>Security is job zero, and one way to make my site more secure is by using CloudFront, which also speeds up the delivery of the site to the end users. Two birds with one stone! </p>
+					<p>Security is job zero, and one way to make my site more secure is by using CloudFront, which also speeds up the delivery of the site to the end-users. Two birds with one stone! </p>
 					<p>The new CloudFront portal is surprisingly easy to use. I also activated AWS Certificate Manager as part of getting the TLS/SSL. </p>
 					<p>As I make changes to my code, some routine tasks such as logging in, file uploading etc became more of a chore, and I realised the need for automation for the front-end through some CI/CD. </p>
 				</details>
@@ -85,7 +85,7 @@
 				<details>
 					<summary>3. Front-end automation CI/CD<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 5 hours</p>
-					<p>With minimal working knowledge of Git and GitHub before I started this pet project, this step could have been unimaginable. XD </p>
+					<p>With a minimal working knowledge of Git and GitHub before I started this pet project, this step could have been unimaginable. XD </p>
 					<p>Through GitHub Actions, local changes are uploaded to S3, and the existing Cloudfront cache is invalidated. </p>
 					<p>You may check out the GitHub Actions YAML script <a href="https://github.com/ja5on6/crc-site/blob/master/.github/workflows/main.yml" target="_blank">here</a>.</p>
 				</details>
@@ -95,21 +95,21 @@
 					<p class="subDetails">~ 20 hours</p>
 					<p>Now we come to building the backend of this site! </p>
 					<p>How this setup works is through a short <a href="https://github.com/ja5on6/crc-site/blob/master/scripts/main.js" target="_blank">javascript script</a> on this page, querying the REST API endpoint on API Gateway. This triggers a Lambda function that updates and returns the visitor number from a DynamoDB table. </p>
-					<p>The beauty of this is at the scale of this site, this setup is practically free! </p>
+					<p>The beauty of this is at the scale of this site, the stack is practically free! </p>
 				</details>
 				
 				<details>
 					<summary>5. Back-end CI/CD with SAM<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 20 hours</p>
 					<p>In step 4, while I assembled the back-end successfully using mainly point-and-click on the AWS management console (and pasting in my Python code in Lambda of cause), it will definitely be cooler if I can do all these automatically without logging in to the AWS console! </p>
-					<p>Never did I know it takes several software applications to be able to use SAM - namely AWS CLI, AWS SAM CLI, Python and Docker, and it's an learning experience to pick up all of them. Thankfully with SAM, it automates the following deployment steps: build, zip code, upload to S3, create role, create/update function, create REST API, create resource, create method, update integration and create table. </p>
+					<p>Never did I know it takes several software applications to be able to use SAM - namely AWS CLI, AWS SAM CLI, Python and Docker, and it's a learning experience to pick up all of them. Thankfully with SAM, it automates the following deployment steps: build, zip code, upload to S3, create role, create/update function, create REST API, create resource, create method, update integration and create table. </p>
 					<p>After some debugging, I finally managed to set up the back-end in an efficient CI/CD manner! </p>
 				</details>
 				
 				<details>
 					<summary>6. Tests<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 10 hours</p>
-					<p>This might be the hardest portion of the challenge, as I didn't realise testing is quite an extensive realm of its own. There are unit tests, integration tests, end-to-end tests/smoke tests, testing with mock aws services using a library called moto etc. </p>
+					<p>This might be the hardest portion of the challenge, as I didn't realise testing is quite an extensive realm of its own. There are unit tests, integration tests, end-to-end tests/smoke tests, testing with mock AWS services using a library called moto etc. </p>
 					<p>I tried Cypress as an end-to-end test, and I know there can be so much more to it. Definitely hope to get a better understanding of the testing scene in the future but for now, my tests are completed successfully. </p>
 					<!--A test to review the Python code, create local repo on SAM such that when push git, the SAM application get packaged and deployed to AWS. -->
 					<!-- for the python test, it is usually called an end-to-end test or smoke test, can consider cypress. Can add cypress test as a github action after deployment finishes. -->
@@ -118,9 +118,9 @@
 				<details>
 					<summary>7. Reflections<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 2 hours</p>
-					<p>What a journey it is to take on this challenge, and I'm so glad I made something interesting, and learnt a ton in the process!</p>
-					<p>There are a few traits that everyone will need in order to do this challenge, [1] to be self-motivated; [2] to be good at problem-solving (to learn fast and google well!); [3] to be patient. </p>
-					<p>If I were to do this again, being more informed I will certainly plan better in terms of timelines and expectations. There were times where I got rather stressed and disheartened when I thought I can finish a portion easily and quickly when in fact there are much more complexity to it. This will be more applicable especially when a project involves working with teammates, and good coordination and communication are needed. </p>
+					<p>What a journey it is to take on this challenge, and I'm so glad I made something on my own and learnt a ton in the process!</p>
+					<p>There are a few relevant traits to complete this challenge successfully, [1] to be self-motivated; [2] to be good at problem-solving (to learn fast and google well!); [3] to be patient.</p>
+					<p>If I were to do this again, being more informed I will certainly plan better in terms of timelines and expectations. There were times where I got rather stressed and disheartened when I thought I can finish some tasks easily and quickly when in fact there are more complexity involved. This will be applicable especially when a project involves working with teammates, and good coordination and communication are needed.</p>
 					<!--To learn fast and google well. -->
 					<!--Self-motivated -->
 					<!-- to be good at problem solving. -->
