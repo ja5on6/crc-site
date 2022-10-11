@@ -5,10 +5,10 @@
 
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="Cloud Resume Challenge journey of Jason Y. Liu."/>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 
 <link type="text/css" rel="stylesheet" href="css/style.css">
-<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,12 +20,12 @@
 		<div id="headshot" class="quickFade">
 			<img src="images/headshot.jpg" alt="Jason Y. Liu" />
 		</div>
-		
+
 		<div id="name">
 			<h1 class="quickFade delayTwo">Jason Y. Liu</h1>
 			<h2 class="quickFade delayThree"><a href="https://forrestbrazeal.com/2020/04/23/the-cloud-resume-challenge/" target="_blank">CRC</a> Challenger</h2>
 		</div>
-		
+
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li><a href="https://www.linkedin.com/in/jliu5/" target="_blank">Message me via Linkedin</a></li>
@@ -35,14 +35,14 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	
+
 	<div id="mainArea" class="quickFade delayFive">
 		<section>
 			<article>
 				<div class="sectionTitle">
 					<h1>Introduction</h1>
 				</div>
-				
+
 				<div class="sectionContent">
 					<p>I recently came across The Cloud Resume Challenge by Forrest Brazeal and thought it's a pretty cool side project. To have the certifications and knowledge is admirable, but to also do the hands-on, build and debug, is respectable. </p>
 					<p>To go through my own "baptism by fire", I got started and created this completely serverless site. </p>
@@ -51,13 +51,13 @@
 			</article>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>How I Built This</h1>
 			</div>
-			
+
 			<div class="sectionContent">
 				<details>
 					<summary>0. Planning<span class="icon">👇</span></summary>
@@ -73,7 +73,7 @@
 					<p>This involved tweaking the HTML and CSS codebase, setting up a domain and hosted zone within Route 53, and configuring S3 static site hosting.</p>
 					<p>With a publicly accessible HTTP site, now it's time to make it a speedier HTTPS. </p>
 				</details>
-				
+
 				<details>
 					<summary>2. CloudFront<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 2 hours</p>
@@ -81,7 +81,7 @@
 					<p>The new CloudFront portal is surprisingly easy to use. I also activated AWS Certificate Manager as part of getting the TLS/SSL. </p>
 					<p>As I make changes to my code, some routine tasks such as logging in, file uploading etc became more of a chore, and I realised the need for automation for the front-end through some CI/CD. </p>
 				</details>
-				
+
 				<details>
 					<summary>3. Front-end automation CI/CD<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 5 hours</p>
@@ -89,7 +89,7 @@
 					<p>Through GitHub Actions, local changes are uploaded to S3, and the existing Cloudfront cache is invalidated. </p>
 					<p>You may check out the GitHub Actions YAML script <a href="https://github.com/ja5on6/crc-site/blob/master/.github/workflows/main.yml" target="_blank">here</a>.</p>
 				</details>
-				
+
 				<details>
 					<summary>4. Visitor counter<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 20 hours</p>
@@ -97,7 +97,7 @@
 					<p>How this setup works is through a short <a href="https://github.com/ja5on6/crc-site/blob/master/scripts/main.js" target="_blank">javascript script</a> on this page, querying the REST API endpoint on API Gateway. This triggers a Lambda function written in Python that updates and returns the visitor number from a DynamoDB table. </p>
 					<p>The beauty of this is at the scale of this site, the stack is practically free! </p>
 				</details>
-				
+
 				<details>
 					<summary>5. Back-end CI/CD with SAM<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 20 hours</p>
@@ -105,7 +105,7 @@
 					<p>Never did I know it takes several software applications to be able to use SAM - namely AWS CLI, AWS SAM CLI and Docker (and Python), and it's a learning experience to pick up all of them. Thankfully with SAM, it automates the following deployment steps: build, zip code, upload to S3, create role, create/update function, create REST API, create resource, create method, update integration and create table. </p>
 					<p>After some debugging, I finally managed to set up the back-end in an efficient CI/CD manner! </p>
 				</details>
-				
+
 				<details>
 					<summary>6. Tests<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 10 hours</p>
@@ -114,7 +114,7 @@
 					<!--A test to review the Python code, create local repo on SAM such that when push git, the SAM application get packaged and deployed to AWS. -->
 					<!-- for the python test, it is usually called an end-to-end test or smoke test, can consider cypress. Can add cypress test as a github action after deployment finishes. -->
 				</details>
-				
+
 				<details>
 					<summary>7. Reflections<span class="icon">👇</span></summary>
 					<p class="subDetails">~ 1 hour</p>
@@ -134,19 +134,19 @@
 					<!-- To Do -->
 					<!-- To Do -->
 					<!-- try out with Amplify: https://amplify1.geekkout.com/ -->
-					
+
 				</details>
-				
+
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
 			</div>
-			
+
 			<div class="sectionContent">
 				<ul class="keySkills">
 					<li>FinOps</li>
@@ -161,13 +161,13 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Education</h1>
 			</div>
-			
+
 			<div class="sectionContent">
 				<article>
 					<h2>Nanyang Technological University</h2>
@@ -177,17 +177,17 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
+
 		<section>
-			
+
 			<div class="sectionContent">
 				<article>
 					<p id="visitors">&nbsp;</p>
 				</article>
 			</div>
 			<div class="clear"></div>
-			
-		</section>		
+
+		</section>
 	</div>
 </div>
 
